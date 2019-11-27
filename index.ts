@@ -1,1 +1,1 @@
-import './src/server';
+require('./src/server').default.listen(3433);

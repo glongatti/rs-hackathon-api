@@ -1,5 +1,7 @@
-import * as question from './question';
+import * as QuestionService from './question';
+import * as AreaService from './area';
 
 export {
-  question,
+  QuestionService,
+  AreaService,
 }

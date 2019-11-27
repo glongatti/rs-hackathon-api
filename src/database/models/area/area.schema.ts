@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import { Schema, Document, Mongoose } from 'mongoose';
 
 export interface IArea extends Document {
   name: string;
@@ -10,4 +10,4 @@ const AreaSchema = new Schema({
   description: { type: String, required: true },
 });
 
-export default mongoose.model<IArea>('Area', AreaSchema);
+export default (mongoose: Mongoose) => mongoose.model<IArea>('Area', AreaSchema);
