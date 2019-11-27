@@ -4,8 +4,7 @@ import { Request, Response } from 'express';
 export async function create(req: Request, res: Response): Promise<Response> {
   let response;
   try {
-    req.body instanceof Array ?
-    response = await Promise.all(req.body.map(async (o: any) => await db.Area.create(req.body))) : 
+    console.log(req.body)
     response = await db.Area.create(req.body);
   } catch (err) {
     return res.sendStatus(500);

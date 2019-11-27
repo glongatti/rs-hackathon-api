@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use('/api', createRouter(express.Router()));
+app.use('/api', (r, s, n)=>{console.log(r.url); n()}, createRouter(express.Router()));
 
 app.use(cors());
 

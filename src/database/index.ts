@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
 
-import area from './models/area/area.schema';
-import question from './models/question/question.schema';
-import option from './models/option/option.schema';
+import area, { IArea } from './models/area/area.schema';
+import question, { IQuestion } from './models/question/question.schema';
+import option, { IOption } from './models/option/option.schema';
 
 mongoose.connect('mongodb+srv://systemadmin:m4rc3l0@desafiomb-xwfc4.mongodb.net/test?retryWrites=true&w=majority', {
   useNewUrlParser: true,
